@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>JERUK NONA - Kasir POS</title>
+    <meta name="description" content="Aplikasi Kasir Point of Sale (POS) Mobile-First JERUK NONA dengan cetak struk thermal ESC/POS Bluetooth, manajemen stok, laporan penjualan, dan offline PWA." />
+    <meta property="og:title" content="JERUK NONA - Kasir POS" />
+    <meta property="og:description" content="Aplikasi Kasir Point of Sale (POS) Mobile-First JERUK NONA dengan cetak struk thermal ESC/POS Bluetooth, manajemen stok, laporan penjualan, dan offline PWA." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#F97316" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Jeruk Nona" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script>
+      // Suppress Vite HMR WebSocket disconnection errors in sandboxed iframe
+      window.addEventListener('error', function(e) {
+        if (e && e.message && (e.message.includes('WebSocket') || e.message.includes('closed without opened'))) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e && e.reason && String(e.reason).includes('WebSocket')) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      });
+    </script>
+  </head>
+  <body class="bg-[#FAF8F5] text-[#111111] antialiased select-none overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

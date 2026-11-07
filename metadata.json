@@ -1,0 +1,6 @@
+{
+  "name": "JERUK NONA - Kasir POS",
+  "description": "Aplikasi Kasir Point of Sale (POS) Mobile-First JERUK NONA dengan cetak struk thermal ESC/POS Bluetooth, manajemen stok, laporan penjualan, dan offline PWA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

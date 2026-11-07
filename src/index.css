@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .safe-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Receipt Print Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receipt-print-area, #receipt-print-area * {
+    visibility: visible;
+  }
+  #receipt-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 0;
+    size: auto;
+  }
+}
+
+/* Monospace Receipt Typography */
+.font-receipt {
+  font-family: 'Courier New', 'Consolas', 'Lucida Console', monospace;
+  letter-spacing: 0.02em;
+}
